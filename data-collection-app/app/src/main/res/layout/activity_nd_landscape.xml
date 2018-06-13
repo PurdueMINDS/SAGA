@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:weightSum="2">
+
+    <TableLayout
+        android:layout_width="0dp"
+        android:layout_height="315dp"
+        android:layout_weight="1">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/Base.Theme.AppCompat.Light.Dialog.FixedSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="GPS"
+                android:id="@+id/gps_text"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColorHint="#229edc"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="70dp"
+                android:id="@+id/gps_image"
+                android:src="@drawable/check"
+                android:layout_marginLeft="20dp"
+                android:layout_column="1"
+                android:paddingBottom="10dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                style="@style/Base.Theme.AppCompat.Light.Dialog.FixedSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Accelerometer"
+                android:id="@+id/textView2"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColorHint="#229edc"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="70dp"
+                android:id="@+id/acc_image"
+                android:src="@drawable/check"
+                android:layout_marginLeft="20dp"
+                android:layout_column="1"
+                android:paddingBottom="10dp"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                style="@style/Base.Theme.AppCompat.Light.Dialog.FixedSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Barometer"
+                android:id="@+id/textView4"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColorHint="#229edc"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="70dp"
+                android:id="@+id/bar_image"
+                android:src="@drawable/check"
+                android:layout_marginLeft="20dp"
+                android:layout_column="1"
+                android:paddingBottom="10dp"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                style="@style/Base.Theme.AppCompat.Light.Dialog.FixedSize"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Gyroscope"
+                android:id="@+id/textView5"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColorHint="#229edc"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="61dp"
+                android:layout_height="70dp"
+                android:id="@+id/gyr_image"
+                android:src="@drawable/check"
+                android:layout_marginLeft="20dp"
+                android:layout_column="1"
+                android:paddingBottom="10dp" />
+        </TableRow>
+
+    </TableLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:layout_marginLeft="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Data recordings:"
+            android:id="@+id/textView3"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginTop="50dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="50sp"
+            android:textStyle="bold"
+            android:id="@+id/counts"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="0"
+            android:textColor="@android:color/darker_gray" />
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Stop"
+            android:id="@+id/stop"
+            android:onClick="handleStopClick"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:background="@android:drawable/editbox_background_normal"
+            android:backgroundTint="@android:color/holo_red_light"
+            android:textColor="@android:color/background_light"
+            android:textStyle="bold"
+            android:textSize="30dp"
+            android:layout_gravity="center_horizontal"
+            android:padding="25dp" />
+    </LinearLayout>
+
+</LinearLayout>

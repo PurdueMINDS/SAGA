@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/flight"
+    >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="1" />
+
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Collect Data"
+        android:id="@+id/collect"
+        android:layout_above="@+id/button3"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_gravity="center_horizontal"
+        android:padding="20dp"
+        android:layout_weight="0"
+        android:layout_marginBottom="20dp" />
+
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Files"
+        android:id="@+id/file_button"
+        android:onClick="checkFile"
+        android:layout_above="@+id/button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:drawable/editbox_background_normal"
+        android:layout_gravity="center_horizontal"
+        android:padding="20dp"
+        android:layout_weight="0"
+        android:layout_marginBottom="20dp"
+         />
+
+    <Button
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Check Sensors"
+        android:id="@+id/button3"
+        android:layout_above="@+id/file_button"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:drawable/editbox_background_normal"
+        android:onClick="showSensorList"
+        android:layout_gravity="center_horizontal"
+        android:padding="20dp"
+        android:layout_weight="0"
+        android:layout_marginBottom="20dp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="xyz.safeflight.datacollection">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".DataCollection.CollectData"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask" />
+
+        <service android:name=".DataCollection.LocationService" />
+
+        <activity
+            android:name=".FileManagement.FileActivity"
+            android:label="@string/title_activity_file_data"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".DataCollection.FrequencyActivity" />
+        <activity android:name=".DataCollection.Sensors.SensorList" />
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".FileManagement.RootDirectoryList" />
+        <activity android:name=".FileManagement.FileList" />
+        <activity android:name=".PlotData.PlotActivity"></activity>
+		<provider
+			android:name="android.support.v4.content.FileProvider"
+			android:authorities="xyz.safeflight.datacollection.fileprovider"
+			android:exported="false"
+			android:grantUriPermissions="true">
+			<meta-data
+				android:name="android.support.FILE_PROVIDER_PATHS"
+				android:resource="@xml/provider_paths"/>
+		</provider>
+	</application>
+
+</manifest>
